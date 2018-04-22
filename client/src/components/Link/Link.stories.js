@@ -9,5 +9,5 @@ storiesOf('Link', module)
         <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
     ))
     .add('default', () => (
-        <Link to="/" dark >Home</Link>
+        <Link to="/" dark>Home</Link>
     ))

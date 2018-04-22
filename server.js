@@ -23,7 +23,9 @@ app.use(bodyParser.json());
 
 // CORS stuff
 var allowedOrigins = [
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'https://bolnick-sandbox.herokuapp.com',
+    'bolnick-sandbox.herokuapp.com'
 ];
 app.use(cors({
     origin: function (origin, callback) {
