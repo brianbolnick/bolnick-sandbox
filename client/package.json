@@ -1,10 +1,11 @@
 {
-  "name": "icpm-client",
+  "name": "sandbox-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
+    "prop-types": "^15.6.1",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-redux": "^5.0.6",
@@ -14,13 +15,18 @@
     "react-scripts": "1.1.0",
     "react-transition-group": "^2.2.1",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^3.2.6"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://localhost:5000",
+  "devDependencies": {
+    "@storybook/react": "^3.4.2"
+  }
 }
