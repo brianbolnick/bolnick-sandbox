@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/App.css';
-import HomePage from './HomePage.js'
-import NotFound from './NotFound.js'
+import HomePage from '../pages/HomePage.js'
+import NotFound from '../pages/NotFound.js'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Route, withRouter, Switch } from "react-router-dom";
 
