@@ -2,22 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components'
 import Button from '../Button/Button'
-
-
-const show = keyframes`
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: flex;
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`;
+import { show, fadeIn, fadeOut, scaleBack, scaleDown, scaleForward, quickScaleDown, scaleUp } from '../Keyframes/Keyframes'
 
 const Overlay = styled.div`
     display: flex;
@@ -32,22 +17,34 @@ const Overlay = styled.div`
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 9999;
     opacity: 1;
-    animation: ${show} .5s ease;
-    overflowX: hidden;
-    overflowY: auto;
+    /* animation: ${show} .5s ease; */
+    animation: ${fadeIn} .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    /* & ${ModalContent} {
+        opacity: 0;
+        animation: ${scaleUp} .8s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;    
+    } */
+
 `
 
 const StyledModal = styled.div`
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 0 0.625rem, rgba(0, 0, 0, 0.2);
-
-    /*@media (min-width: 576px)': {
-    width: '32rem',
-    }*/
+    /* background: white; */
+    /* padding: 50px; */
+    display: inline-block;
+    /* border-radius: 3px; */
+    /* font-weight: 300; */
+    position: relative;
+    width: 50%;
+    /* opacity: 0; */
+    animation: ${scaleUp} .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;  
+    @media (max-width: 1320px) {
+        width: 90%;
+    }
 `
 
 const ModalContent = styled.div`
+ 
 `
 
 const CloseButton = styled.button`
@@ -116,7 +113,9 @@ class Target extends Component {
 
                 {showModal &&
                     <Modal onCloseRequest={() => this.handleToggleModal()}>
-                        {children}
+                        {/* <ModalContent> */}
+                            {children}
+                        {/* </ModalContent> */}
                     </Modal>}
             </div>
         );
@@ -157,7 +156,7 @@ class Modal extends Component {
 
     handleOutsideClick(e) {
         const { onCloseRequest } = this.props;
-        if (this.wrapperRef && !this.wrapperRef.contains(event.target))  {            
+        if (this.wrapperRef && !this.wrapperRef.contains(e.target))  {            
             onCloseRequest();
             document.removeEventListener('click', this.handleOutsideClick, false);
         }
@@ -176,7 +175,7 @@ class Modal extends Component {
 
         return (
             <Overlay>
-                <StyledModal >
+                <StyledModal>
                     <ModalContent innerRef={this.setWrapperRef}>
                         {children}
                     </ModalContent>
