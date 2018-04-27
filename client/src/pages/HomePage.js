@@ -15,7 +15,6 @@ const gradients = [
 
 const Container = styled.div`
   min-height: 100vh;
-  min-width: 100vh;
   ${gradients[[Math.floor(Math.random() * gradients.length)]]} 
   display: flex;
   justify-content: center;
