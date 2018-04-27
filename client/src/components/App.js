@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/App.css';
 import HomePage from '../pages/HomePage.js'
 import NotFound from '../pages/NotFound.js'
+import Table from '../pages/Table'
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Route, withRouter, Switch } from "react-router-dom";
 
@@ -21,6 +22,7 @@ class App extends Component {
           <div>
             <Switch location={this.props.location}>
               <Route path="/" exact component={HomePage} />
+              <Route path="/table" exact component={Table} />
               <Route component={NotFound} />
             </Switch>
           </div>

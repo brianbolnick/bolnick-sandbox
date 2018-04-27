@@ -34,11 +34,13 @@ const Content = styled.div`
 class HomePage extends Component {
   render() {
     return (
-      <Container>        
+      <Container>
         <Modal target={
-          <Button>Click Me...</Button>
+          <Button>Where do you want to go?</Button>
         }>
-          <Content> hello </Content>
+          <Content>
+            <Link to='/table' dark> Big Table </Link>
+          </Content>
         </Modal>
       </Container>
     );

@@ -1,0 +1,10 @@
+export default [{"id":1,"first_name":"Milty","last_name":"Sealey","email":"msealey0@google.co.uk","gender":"Male","address":"3363 Northport Pass"},
+{"id":2,"first_name":"Lonee","last_name":"Radley","email":"lradley1@cyberchimps.com","gender":"Female","address":"491 Meadow Vale Pass"},
+{"id":3,"first_name":"Darrelle","last_name":"Peery","email":"dpeery2@pen.io","gender":"Female","address":"88 Springview Place"},
+{"id":4,"first_name":"Irma","last_name":"Linacre","email":"ilinacre3@psu.edu","gender":"Female","address":"10 Garrison Court"},
+{"id":5,"first_name":"Elene","last_name":"Wilce","email":"ewilce4@microsoft.com","gender":"Female","address":"664 Thackeray Pass"},
+{"id":6,"first_name":"Dana","last_name":"Colleton","email":"dcolleton5@homestead.com","gender":"Female","address":"29025 Di Loreto Crossing"},
+{"id":7,"first_name":"Bennie","last_name":"Shirley","email":"bshirley6@posterous.com","gender":"Male","address":"64 Pierstorff Lane"},
+{"id":8,"first_name":"Lyndsay","last_name":"McAline","email":"lmcaline7@oaic.gov.au","gender":"Female","address":"8102 Eagan Terrace"},
+{"id":9,"first_name":"Ailina","last_name":"Clapison","email":"aclapison8@sakura.ne.jp","gender":"Female","address":"032 Johnson Way"},
+{"id":10,"first_name":"Winifred","last_name":"Giorgetti","email":"wgiorgetti9@t.co","gender":"Female","address":"2 Lindbergh Avenue"}]
